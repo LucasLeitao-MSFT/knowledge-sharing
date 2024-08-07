@@ -17,7 +17,6 @@ foreach ($group in $groups) {
         if ($member.additionalproperties.'@odata.type' -eq "#microsoft.graph.group") {
             $groupsWithNestedGroups += $group
             break
-        Write-Output $member.Id
         }
 
     }
