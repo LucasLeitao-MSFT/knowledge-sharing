@@ -9,7 +9,8 @@ $groupsWithNestedGroups = @()
 $groups = Get-MgGroup -all
 
 
-#Going through all groups and getting the respective group members#If one of group's members is another group, group object is added to the $groupsWithNestedGroups variable. 
+#Going through all groups and getting the respective group members.
+#If one of group's members is another group, group object is added to the $groupsWithNestedGroups variable. 
 foreach ($group in $groups) {
     $members = Get-MgGroupMember -GroupId $group.Id -All
     foreach ($member in $members) {
