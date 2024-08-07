@@ -1,10 +1,10 @@
-﻿#Insta MG Graph Module
+﻿#Insta MG Graph Module.
 Install-Module Microsoft.Graph -Scope CurrentUser
 
-#Connect with the correct scope
+#Connect with the correct scope.
 Connect-MgGraph -Scopes "Group.Read.All"
 
-#Initializing variables
+#Initializing variables.
 $groupsWithNestedGroups = @()
 $groups = Get-MgGroup -all
 
@@ -22,6 +22,7 @@ foreach ($group in $groups) {
     }
 }
 
+#Printing the list of groups who have other groups as members.
 $groupsWithNestedGroups | Select-Object DisplayName, Id
 
 
