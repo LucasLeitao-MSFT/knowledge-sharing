@@ -1,4 +1,4 @@
-﻿#Conenct to MgGraph with the correct scopes
+﻿#Connect to MgGraph with the correct scopes
 Connect-MgGraph -Scopes "User.Read.All","Group.Read.All","AuditLog.Read.All"
 
 
